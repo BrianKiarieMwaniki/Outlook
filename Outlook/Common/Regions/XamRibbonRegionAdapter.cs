@@ -1,5 +1,5 @@
 ﻿using Infragistics.Windows.Ribbon;
-using Prism.Regions;
+using Prism.Navigation.Regions;
 using System;
 using System.Collections.Specialized;
 
