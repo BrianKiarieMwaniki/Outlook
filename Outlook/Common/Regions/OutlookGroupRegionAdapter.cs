@@ -1,5 +1,5 @@
 ﻿using Infragistics.Windows.OutlookBar;
-using Prism.Regions;
+using Prism.Navigation.Regions;
 
 namespace Outlook.Common.Regions;
 

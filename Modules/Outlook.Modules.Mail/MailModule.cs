@@ -1,9 +1,11 @@
 ﻿using Outlook.Core;
 using Outlook.Modules.Mail.Menus;
+using Outlook.Modules.Mail.ViewModels;
 using Outlook.Modules.Mail.Views;
 using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
+using Prism.Mvvm;
+using Prism.Navigation.Regions;
 
 namespace Outlook.Modules.Mail
 {
@@ -18,15 +20,16 @@ namespace Outlook.Modules.Mail
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            //TODO: remove
-            _regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(ViewA));
+           
             _regionManager.RegisterViewWithRegion(RegionNames.RibbonRegion, typeof(HomeTab));
             _regionManager.RegisterViewWithRegion(RegionNames.OutlookGroupRegion, typeof(MailGroup));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            ViewModelLocationProvider.Register<MailGroup, MailGroupViewModel>();
 
+            containerRegistry.RegisterForNavigation<MailList, MailListViewModel>();
         }
     }
 }
