@@ -6,7 +6,7 @@ using System;
 
 namespace Outlook.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class MainWindowViewModel : ViewModelBase
     {
         private string _title = "Outlook";
         public string Title
