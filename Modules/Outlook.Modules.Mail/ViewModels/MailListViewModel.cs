@@ -1,9 +1,10 @@
-﻿using Prism.Mvvm;
+﻿using Outlook.Core;
+using Prism.Mvvm;
 using Prism.Navigation.Regions;
 
 namespace Outlook.Modules.Mail.ViewModels;
 
-public class MailListViewModel : BindableBase, INavigationAware
+public class MailListViewModel : ViewModelBase
 {
     private string _title = "Default";
 
@@ -16,19 +17,9 @@ public class MailListViewModel : BindableBase, INavigationAware
     public MailListViewModel()
     {
 
-    }
+    }  
 
-    public bool IsNavigationTarget(NavigationContext navigationContext)
-    {
-        return true;
-    }
-
-    public void OnNavigatedFrom(NavigationContext navigationContext)
-    {
-        
-    }
-
-    public void OnNavigatedTo(NavigationContext navigationContext)
+    public override void OnNavigatedTo(NavigationContext navigationContext)
     {
         Title = navigationContext.Parameters.GetValue<string>("id");
     }

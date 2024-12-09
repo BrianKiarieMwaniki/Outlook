@@ -1,13 +1,11 @@
 ﻿using Outlook.Business;
 using Outlook.Core;
 using Prism.Commands;
-using Prism.Mvvm;
-using System;
 using System.Collections.ObjectModel;
 
 namespace Outlook.Modules.Mail.ViewModels;
 
-public class MailGroupViewModel : BindableBase
+public class MailGroupViewModel : ViewModelBase
 {
 
     private ObservableCollection<NavigationItem> _items;

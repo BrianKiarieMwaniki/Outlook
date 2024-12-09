@@ -2,7 +2,7 @@
 
 public static class RegionNames
 {
-    public static readonly string ContentRegion = "ContentRegion";
-    public static readonly string OutlookGroupRegion = "OutlookGroupRegion";
-    public static readonly string RibbonRegion = "RibbonRegion";
+    public const string ContentRegion = "ContentRegion";
+    public const string OutlookGroupRegion = "OutlookGroupRegion";
+    public const string RibbonRegion = "RibbonRegion";
 }
